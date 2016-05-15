@@ -1,9 +1,11 @@
-import React from 'react-native';
-import Render from './Render';
-const {
+import React, { Component } from 'react';
+import {
     Animated,
     Easing,
-} = React;
+} from 'react-native';
+
+import Render from './Render';
+
 
 
 class TaskRow extends React.Component {

@@ -1,15 +1,15 @@
-import React from 'react-native';
-
-const {
+import {
     Text,
     TextInput,
     View,
     TouchableHighlight,
-} = React;
+} from 'react-native';
+import React, { Component } from 'react';
+import ReactNative from 'react-native';
 
 import store from './todoStore';
 
-const styles = React.StyleSheet.create({
+const styles = ReactNative.StyleSheet.create({
     buttonText: {
         fontSize: 18,
         fontWeight: '600',
@@ -31,7 +31,7 @@ const styles = React.StyleSheet.create({
     },
 });
 
-class TaskForm extends React.Component {
+class TaskForm extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
@@ -59,9 +59,9 @@ class TaskForm extends React.Component {
                     paddingTop: 150,
                     backgroundColor: '#F7F7F7',
                 }}
-            >
+                >
                 <TextInput
-                    onChangeText={(todo) => this.setState({todo})}
+                    onChangeText={(todo) => this.setState({ todo }) }
                     placeholder="Enter task"
                     style={{
                         height: 50,
@@ -72,12 +72,12 @@ class TaskForm extends React.Component {
                         borderRadius: 3,
                         borderColor: '#D7D7D7',
                     }}
-                />
+                    />
 
                 <TouchableHighlight
-                    onPress={this.addPressed.bind(this)}
+                    onPress={this.addPressed.bind(this) }
                     style={styles.button}
-                >
+                    >
 
                     <Text style={styles.buttonText}>
                         Add one
@@ -86,9 +86,9 @@ class TaskForm extends React.Component {
                 </TouchableHighlight>
 
                 <TouchableHighlight
-                    onPress={this.cancelPressed.bind(this)}
+                    onPress={this.cancelPressed.bind(this) }
                     style={[styles.button, styles.cancelButton]}
-                >
+                    >
                     <Text style={styles.buttonText}>
                         Cancel
                     </Text>

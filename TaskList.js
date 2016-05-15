@@ -1,15 +1,17 @@
-import React from 'react-native';
-const {
+import React, { Component } from 'react';
+import {
     ListView,
     View,
     TouchableHighlight,
-    Text,
-} = React;
+    Text
+} from 'react-native';
+import ReactNative from 'react-native';
+
 import _ from 'lodash';
 import TaskRow from './TaskRow/index';
 import store from './todoStore';
 
-const styles = React.StyleSheet.create({
+const styles = ReactNative.StyleSheet.create({
     buttonText: {
         fontSize: 20,
         fontWeight: '600',
@@ -29,7 +31,7 @@ const styles = React.StyleSheet.create({
 });
 
 
-class TaskList extends React.Component {
+class TaskList extends Component {
     constructor(props, context) {
         super(props, context);
 
